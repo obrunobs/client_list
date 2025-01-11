@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+</head>
+<body>
+    <h1>Client</h1>
+    <h2><%= "Name: " + "#{@client.name}" %></h2>
+    <h2><%= "Age: " + "#{@client.age}" %></h2>
+    <h2><%= "Function: " + "#{@client.function}" %></h2>
+    <br>
+    <h2><%= link_to "Client list", clients_path %></h2>
+
+</body>
+</html>
