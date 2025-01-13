@@ -7,12 +7,15 @@
 </head>
 <body>
     <h1>Client list</h1>
+    <br>
+    <h2><%= link_to "New Client", new_client_path %></h2>
+    <br>
     <h2><% @clients = @clients.each do |c| %></h2>
     <h2><%= "Name: " + "#{c.name}" %></h2>
     <h2><%= "Age: " + "#{c.age}" %></h2>
-    <h2><%= "Function: " + "#{c.function}" %></h2>
-    <h2><%= link_to "Show Client", client_path(c) %></h2>
-    <h2><%= link_to "Edit Client", edit_client_path(c) %></h2>
+    <h3><%= "Function: " + "#{c.function}" %></h3>
+    <h3><%= link_to "Show Client", client_path(c) %></h3>
+    <h3><%= link_to "Edit Client", edit_client_path(c) %></h3>
     <br>
     <% end %>
 </body>
