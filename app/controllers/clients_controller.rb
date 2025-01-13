@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  before_action :load_client, only: [ :show, :edit, :update ]
+  before_action :load_client, only: [ :show, :edit, :update, :destroy ]
   def index
     @clients = Client.all
   end
@@ -24,6 +24,14 @@ class ClientsController < ApplicationController
       redirect_to client_path(@client)
     else
       render :new
+    end
+  end
+
+  def destroy
+    if @client.destroy
+      redirect_to clients_path
+    else
+      alert_errors
     end
   end
 
