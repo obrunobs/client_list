@@ -16,6 +16,7 @@
     <h3><%= "Function: " + "#{c.function}" %></h3>
     <h3><%= link_to "Show Client", client_path(c) %></h3>
     <h3><%= link_to "Edit Client", edit_client_path(c) %></h3>
+    <h3><%= button_to "Remove Client", client_path(c), method: :delete, form: { data: { turbo_confirm: "Do you really want to remove #{c.name} from your Client list?" } } %></h3>
     <br>
     <% end %>
 </body>
